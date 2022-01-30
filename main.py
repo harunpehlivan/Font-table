@@ -79,10 +79,11 @@ def draw_font_table(path):
         colLabels=labelc,
         rowColours=["palegreen"] * 16,
         colColours=["palegreen"] * 16,
-        cellColours=[[".95" for c in range(16)] for r in range(16)],
+        cellColours=[[".95" for _ in range(16)] for _ in range(16)],
         cellLoc='center',
         loc='upper left',
     )
+
     for key, cell in table.get_celld().items():
         row, col = key
         if row > 0 and col > -1:  # Beware of table's idiosyncratic indexing...
